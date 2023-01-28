@@ -1,0 +1,27 @@
+@import './common/var.scss';
+@import './common/element-ui.scss';
+@import './common/reset.scss';
+
+@import './table-page.scss';
+@import './form.scss';
+@import './search-button.scss';
+@import './form-item.scss';
+@import './dropdown-button.scss';
+
+// form item
+@import './items/cascader.scss';
+@import './items/checkbox.scss';
+@import './items/date-picker.scss';
+@import './items/input.scss';
+@import './items/input-number.scss';
+@import './items/radio.scss';
+@import './items/rate.scss';
+@import './items/select.scss';
+@import './items/select-v2.scss';
+@import './items/slider.scss';
+@import './items/switch.scss';
+@import './items/time-picker.scss';
+@import './items/time-select.scss';
+@import './items/transfer.scss';
+@import './items/upload.scss';
+@import './items/rich-text.scss';

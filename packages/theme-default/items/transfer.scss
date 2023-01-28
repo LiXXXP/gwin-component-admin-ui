@@ -1,0 +1,16 @@
+@import '../mixins/mixins.scss';
+
+@include b(transfer-wrapper) {
+  @include when(line) {
+    &:before {
+      content: '-';
+      font-size: 14px;
+      display: inline-block;
+      width: 14px;
+      text-align: center;
+    }
+  }
+}
+
+@include b(transfer) {
+}

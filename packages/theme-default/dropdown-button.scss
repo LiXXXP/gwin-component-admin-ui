@@ -1,0 +1,30 @@
+@import './mixins/mixins.scss';
+
+@include b(dropdown-button) {
+  position: relative;
+  z-index: 10;
+  margin-left: 10px;
+
+  @include e(hide) {
+    display: none;
+    position: absolute;
+    width: 100%;
+    border: #dcdfe6 solid 1px;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 5px;
+    text-align: center;
+    .el-button {
+      margin: 4px 0 0 0;
+      display: 'block';
+      width: calc(100% - 16px);
+      margin-left: '8px';
+    }
+  }
+
+  &:hover {
+    @include e(hide) {
+      display: block;
+    }
+  }
+}

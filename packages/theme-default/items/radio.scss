@@ -1,0 +1,12 @@
+@import '../mixins/mixins.scss';
+
+@include b(radio-group) {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  // align-items: center;
+  :deep .el-radio__label {
+    font-size: 14px;
+    font-weight: normal;
+  }
+}

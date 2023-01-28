@@ -1,0 +1,87 @@
+@import './mixins/mixins.scss';
+
+@include b(table-page) {
+  @include when(body) {
+    margin-top: 12px;
+  }
+}
+
+@include b(search-form) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -10px;
+
+  @include e(item) {
+    margin-bottom: 10px;
+  }
+}
+
+@include b(table) {
+  margin-top: 20px;
+}
+
+@include b(tags) {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include e(tag) {
+    flex-shrink: 0;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #d9ecff;
+    border-radius: 4px;
+    background-color: #409eff;
+    text-align: center;
+    color: white;
+    padding:0px 10px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@include b(tootip-content) {
+  margin: auto;
+}
+
+@include b(actions) {
+  display: flex;
+  align-items: center;
+  height: 32px;
+
+  @include e(action) {
+    margin-left: 10px;
+    padding: 0;
+    min-height: auto;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  button {
+    font-weight: normal;
+  }
+}
+
+@include b(pagination) {
+  margin-top: 30px;
+  text-align: center;
+  justify-content: center;
+  .el-pagination__sizes {
+    margin: 0 16px !important;
+  }
+}
+
+@include b(common-dialog) {
+  @include e(content) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  @include e(footer) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

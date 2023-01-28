@@ -1,0 +1,13 @@
+@import '../mixins/mixins.scss';
+
+@include b(upload) {
+  @include e(icon) {
+    width: 26px !important;
+    height: 26px !important;
+    color: #606a78;
+  }
+}
+
+.hide .el-upload--picture-card {
+  display: none;
+}

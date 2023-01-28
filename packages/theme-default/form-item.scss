@@ -1,0 +1,107 @@
+@import './mixins/mixins.scss';
+@import './common/var.scss';
+
+@include b(item) {
+  margin-bottom: 10px;
+
+  @include e(right) {
+    position: relative;
+  }
+
+  @include e(message) {
+    position: absolute;
+    bottom: -14px;
+    margin-top: 2px;
+  }
+
+  @include e(value) {
+    line-height: 32px;
+  }
+}
+
+@include b(item-label) {
+  color: $label;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}
+
+@include b(item-normal) {
+  display: flex;
+
+  @include e(label) {
+    color: $label;
+    flex-shrink: 0;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+
+    @include when(required) {
+      &::after {
+        content: '*';
+        color: #f56c6c;
+        transform: scale(0.833);
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+@include b(item-vertical) {
+  @include e(label) {
+    line-height: 14px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+
+    @include when(required) {
+      &::after {
+        content: '*';
+        color: #f56c6c;
+        transform: scale(0.833);
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+@include b(item-aligin-right) {
+  display: flex;
+  @include e(label) {
+    flex-shrink: 0;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    @include when(required) {
+      &::before {
+        content: '*';
+        color: #f56c6c;
+        transform: scale(0.833);
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+@include b(item-tooltip) {
+}
+
+@include b(item-tip-icon) {
+  margin-left: 2px;
+  margin-right: 2px;
+  color: #999;
+  cursor: pointer;
+}
+
+@include b(item-message) {
+  line-height: 12px;
+  font-size: 12px;
+  color: $error;
+}
+
+@include b(el-item) {
+  width: $formItemWidth !important;
+  margin-bottom: 0;
+}

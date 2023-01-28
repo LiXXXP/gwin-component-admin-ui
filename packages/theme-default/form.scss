@@ -1,0 +1,126 @@
+@import './mixins/mixins.scss';
+
+@include b(form) {
+
+  @include when(horizontal) {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include e(items) {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    @include e(row) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include e(item) {
+      margin-right: 12px;
+    }
+
+    @include e(contents) {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 24px;
+      align-items: center;
+      box-sizing: border-box;
+      border: 1px dashed #7b61ff;
+      justify-content: space-between;
+      &.active {
+        border: 1px solid #2f51ff;
+      }
+    }
+
+    @include e(actions) {
+      display: flex;
+    }
+  }
+
+  @include when(vertical) {
+
+    @include e(items) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    @include e(row) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include e(item) {
+      flex: 1;
+    }
+  }
+}
+
+@include b('icons') {
+  display: flex;
+  align-items: center;
+  @include e('icon') {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include e(action) {
+    color: #b1b6bb;
+    margin-left: 24px;
+    font-size: 12px;
+    &:hover {
+      color: #2f51ff;
+    }
+    p {
+      margin-top: 5px;
+    }
+  }
+}
+
+@include b('form-design') {
+
+  @include e('row') {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px dashed #7b61ff;
+    &.active {
+      border: 1px solid #2f51ff;
+    }
+  }
+
+  @include e('contents-wrapper') {
+    display: flex;
+    flex: 1;
+  }
+
+  @include e(contents) {
+    flex: 1;
+    padding: 20px;
+    margin-left: 24px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px dashed #7b61ff;
+    justify-content: space-between;
+    &.active {
+      border: 1px solid #2f51ff;
+    }
+  }
+}

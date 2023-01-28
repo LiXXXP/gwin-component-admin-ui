@@ -1,0 +1,12 @@
+@import '../mixins/mixins.scss';
+
+@include b(rich-text) {
+}
+
+.tox-tinymce-aux {
+  z-index: 9999 !important;
+}
+
+.tinymce.ui.FloatPannel {
+  z-index: 9998;
+}

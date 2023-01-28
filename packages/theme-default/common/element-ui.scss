@@ -1,0 +1,29 @@
+.el-pagination .el-select .el-input .el-input__inner,
+.el-pagination--small .el-pagination__editor.el-input .el-input__inner {
+  line-height: 20px;
+}
+
+.el-table th {
+  background-color: #fafbfd !important;
+}
+
+.el-table th.is-leaf {
+  border-bottom: 0;
+}
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).is-active {
+  border-color: var(--el-color-primary);
+  &:hover {
+    color: #fff !important;
+  }
+}
+.el-pagination .btn-next .el-icon,
+.el-pagination .btn-prev .el-icon {
+  display: inline-block;
+}
